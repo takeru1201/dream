@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: dream_production
-  username: dream
-  password: <%= ENV['DREAM_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
