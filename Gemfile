@@ -73,3 +73,6 @@ gem 'sprockets', '3.7.2'
 group :production do
   gem 'unicorn', '5.4.1'
 end
+
+gem 'haml-rails'
+gem 'font-awesome-sass'
