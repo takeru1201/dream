@@ -21,10 +21,10 @@
   }
   .sub-header{
     position: absolute;
-    height: 38px;
     right: 0;
     top: 40px;
     &__post{
+      width: 250px;
       height: 37px;
       padding: 0 0 0 20px;
       font-size: 25px;
@@ -42,9 +42,9 @@
       display: flex;
       padding-top: 35px;
       &--list{
-        padding: 0 0 0 20px;
         a{
           color: black;
+          padding: 30px 60px 30px 30px;
         }
       }
     }
