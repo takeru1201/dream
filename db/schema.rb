@@ -14,14 +14,7 @@ ActiveRecord::Schema.define(version: 2020_07_10_074438) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.string "sub_title", null: false
     t.text "text", null: false
-    t.string "pen_name", null: false
-    t.string "name", null: false
-    t.string "name_kana", null: false
-    t.string "prefecture", null: false
-    t.date "birthday", null: false
-    t.string "gender", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
