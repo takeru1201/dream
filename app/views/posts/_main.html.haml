@@ -1,0 +1,57 @@
+%main.main
+  .main__layout
+    .main__layout--post
+      .postList
+        .postList__content  
+          - @posts.each do |post| 
+            .postList__content--name  
+              .icon 
+                =icon('fas', 'edit')
+              .nickname 
+                = post.name
+            .postList__content--title 
+              = post.title
+            .postList__content--subtitle  
+              = post.sub_title
+            .postList__content--text  
+              = post.text
+            .postList__content--date  
+              = post.created_at
+          .postList__content  
+            .postList__content--name  白石武 (23歳)
+            .postList__content--title  UVERworld
+            .postList__content--subtitle  UVERworldと僕
+            .postList__content--text  UVERworldとの出会いは4年半前になる。それまでの自分はただ惰性で生きる日々だった。その日、僕はYouTubeでいつも通り、MVをひたすらベットの上で眺めていた。
+            .postList__content--date  2020年7月3日
+    .main__layout--sidebar
+      .awardList  
+        2020年・6月 月間賞
+      .awardList__content 
+        .icon  
+          =icon('fa', 'trophy')
+        .name
+          2020年・6月 月間賞 | 白石武 (23歳)
+      .awardList__title
+        UVERworld
+      .awardList__date
+        2020年7月3日
+
+      .awardList__content 
+        .icon  
+          =icon('fa', 'trophy')
+        .name
+          2020年・6月 月間賞 | 白石武 (23歳)
+      .awardList__title
+        UVERworld
+      .awardList__date
+        2020年7月3日
+        
+      .awardList__content 
+        .icon  
+          =icon('fa', 'trophy')
+        .name
+          2020年・6月 月間賞 | 白石武 (23歳)
+      .awardList__title
+        UVERworld
+      .awardList__date
+        2020年7月3日
