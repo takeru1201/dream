@@ -1,21 +1,49 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.titile
+  夢口人
+.user-main
+  = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+    = devise_error_messages! 
+    .user-main__title
+      ユーザー登録
+    .user-main__contents
+      .nickname
+        = f.label :nickname 
+        %span 必須
+        %br/
+        = f.text_field :nickname, maxlength: "6"
+      .e-mail
+        = f.label :email
+        %span 必須
+        %br/
+        = f.email_field :email
+      .password
+        = f.label :passwaord
+        %span 必須
+        %br/
+        = f.password_field :password, autocomplete: "off"
+      .password_confirmation
+        = f.label :password_confirmation
+        %span 必須
+        %br/
+        = f.password_field :password_confirmation
+      .gender
+        = f.label :gender
+        %br/
+        - %w(男 女 選択しない).each.with_index do |ingredient,i|
+          %label
+            = check_box_tag 'samurai[ingredients][]', ingredient,false,id:"samurai_ingredients_#{i}"
+            = ingredient
+        %span
+        %br/
+      .age
+        = f.label :age
+        %span
+        %br/
+        = f.text_field :age
+      .prefectures
+        = f.label :prefectures
+        %span
+        %br/
+        = f.text_field :prefectures
+    .user-actions
+      = f.submit "登録する"
