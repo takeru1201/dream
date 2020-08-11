@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.registration{
+  height: 100%; 
+  background-color: mistyrose;
+  .title{
+    font-size: 60px;
+    max-width: 20%;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  .user-main{
+    max-width: 40%;
+    margin: 0 auto;
+    &__title{
+      text-align: center;
+    }
+    &__contents{
+      background-color: #ffffff;
+      text-align: center;
+    }
+  }
+}
